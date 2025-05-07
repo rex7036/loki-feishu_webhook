@@ -22,3 +22,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+
+# 排除自述文件
+README.md
