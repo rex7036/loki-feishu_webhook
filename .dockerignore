@@ -1,0 +1,24 @@
+# 排除部署相关文件
+docker-compose*
+kubernetes/
+Dockerfile
+.dockerignore
+
+# 排除版本控制文件
+.git/
+.gitignore
+
+# 排除本地配置文件
+.env
+.env.example
+*.local
+
+# 排除 IDE 文件
+.idea/
+.vscode/
+
+# 排除 Python 临时文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
