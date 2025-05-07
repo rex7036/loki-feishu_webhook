@@ -1,0 +1,19 @@
+services:
+  loki-feishu_webhook:
+    container_name: loki-feishu_webhook
+    image:  r.iop88.cn/aneng/loki-feishu-alert:v4.0
+    restart: always
+    #networks:
+    #  - safeline-ce
+    environment:
+      - TZ=Asia/Shanghai
+      - FEISHU_WEBHOOK_URL=https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxxxxxxxxxx
+      - FEISHU_SECRET=xxxxxxxxxxxxxxxxxxx
+      - HOST=0.0.0.0
+      - PORT=8000
+      - MYSQL_HOST=xxxxxxxxxx
+      - MYSQL_DB=xxxxx
+      - MYSQL_USER=xxxxx
+      - MYSQL_PSWD=xxxxxxxxxxx
+    ports:
+      - 8000:8000
