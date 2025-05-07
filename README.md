@@ -62,7 +62,17 @@ GRAFANA_URL=你的Grafana地址
 uvicorn main:app --host 0.0.0.0 --port 8000
 ```
 #### docker-compose
-按实际情况修改compose.yaml配置后运行
+1.按实际情况编辑main.py内容，主要在这这两个位置：
+<img width="343" alt="image" src="https://github.com/user-attachments/assets/8bbddde5-f6eb-43f8-a755-5c9dc07a5ee4" />
+
+<img width="1025" alt="image" src="https://github.com/user-attachments/assets/d16e924c-4ff4-415c-9061-b91cc45c9a73" />
+2.构建容器镜像,并推送到镜像仓库：
+```bash
+docker build -t loki-feishu_webhook -f Dockerfile
+docker tag  loki-feishu_webhook:latest your_repo/loki-feishu_webhook:latest
+docker push your_repo/loki-feishu_webhook:latest
+```
+3.按实际情况修改compose.yaml配置后运行：
 ```bash
 docker compose up -d
 ```
