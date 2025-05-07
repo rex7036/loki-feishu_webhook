@@ -1,10 +1,8 @@
 services:
   loki-feishu_webhook:
     container_name: loki-feishu_webhook
-    image:  r.iop88.cn/aneng/loki-feishu-alert:v4.0
+    image: your_repo/loki-feishu_webhook:latest
     restart: always
-    #networks:
-    #  - safeline-ce
     environment:
       - TZ=Asia/Shanghai
       - FEISHU_WEBHOOK_URL=https://open.feishu.cn/open-apis/bot/v2/hook/xxxxxxxxxxxxxxxx

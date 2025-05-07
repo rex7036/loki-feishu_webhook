@@ -40,7 +40,7 @@ spec:
           value: "xxxxx"
         - name: MYSQL_PSWD
           value: "xxxxxxx"
-        image: r.iop88.cn/aneng/loki-feishu-alert:v4.0
+        image: your_repo/loki-feishu_webhook:latest
         imagePullPolicy: Always
         lifecycle: {}
         livenessProbe:
